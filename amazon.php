@@ -13,6 +13,8 @@ $flink = "https://www.amazon.co.uk/dp/".$get;
           ),
         ));
           
+
+        echo "sdjhfkjshfdkjfds";
         $response = curl_exec($curl);
         curl_close($curl);
         $source =  strval($response);
