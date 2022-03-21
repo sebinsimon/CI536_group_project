@@ -1,0 +1,82 @@
+html{
+    font-family: Arial, Helvetica, sans-serif;
+}
+#banner{
+    background-color: #d4e3fc;
+    border: 1px solid rgb(121, 117, 117);
+    border-radius: 20px;
+}
+#banner h1{
+    padding-left:10px;
+    font-family: asar;
+}
+
+li{
+    display: inline;
+}
+#search{
+  float: right;
+  margin-right: 80px;
+  padding-right: 10px;
+  display: flex;
+  border-radius: 20px;
+  box-shadow: inset rgba(207, 216, 230, 0.8) 1px 1px 1px 1px;
+  
+}
+#banner a{
+    text-decoration: none;
+    color: black;
+    margin-left: 14px;
+    font-size: 24px;
+    
+}
+#result{
+    background-color: #d4e3fc;
+    border: 1px solid rgb(121, 117, 117);
+    border-radius: 20px;
+    margin-top: 10px;
+    padding-left: 8px;
+}
+#recomendation{
+    display: flex;
+    width: 100%;
+    margin: auto;
+    margin-top: 21px;
+    margin-bottom: 21px;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: rgb(255, 253, 253);
+    border: 1px solid rgb(121, 117, 117);
+    border-radius: 20px;
+}
+footer{
+    border: 1px solid rgb(121, 117, 117);
+    border-radius: 20px;
+    margin-top: 6px;
+    text-align: center;
+}
+footer a{
+    text-decoration: none;
+    color: black;
+    padding-left: 18px;
+    padding-right: 18px;
+}
+item{
+    background-color: white;
+    display: flex;
+    width: 300px;
+    height: auto;
+    padding: 20px;
+    flex-direction: column;
+    border: solid 5px rgb(0, 0, 0);
+    border-radius: 20px;
+    justify-content: space-evenly;
+    margin: auto;
+}
+img{
+    width: 300px;
+}
+#title p{
+    text-overflow: ellipsis;
+}
