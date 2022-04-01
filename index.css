@@ -6,9 +6,13 @@ html{
     border: 1px solid rgb(121, 117, 117);
     border-radius: 20px;
 }
-#banner h1{
+#logo a{
+    text-decoration: none;
     padding-left:10px;
-    font-family: asar;
+    color: black;
+     font-family: asar;
+    font-size: 45px;
+        
 }
 
 li{
@@ -23,7 +27,7 @@ li{
   box-shadow: inset rgba(207, 216, 230, 0.8) 1px 1px 1px 1px;
   
 }
-#banner a{
+#menu a{
     text-decoration: none;
     color: black;
     margin-left: 14px;
