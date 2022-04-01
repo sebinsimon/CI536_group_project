@@ -124,3 +124,17 @@ img{
     border-radius: 20px;
 
 }
+#LatestGadgets{
+    display: flex;
+    width: 100%;
+    margin: auto;
+    margin-top: 21px;
+    margin-bottom: 21px;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: rgb(255, 253, 253);
+    border: 1px solid rgb(121, 117, 117);
+    border-radius: 20px;
+    
+}
