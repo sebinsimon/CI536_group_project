@@ -3,7 +3,28 @@ window.addEventListener("load", function (evt) {
    
 
     evt.preventDefault();
+
+    var loading = document.querySelector('.loader-wrapper');
+    var result = document.querySelector('#result');
     var recomendation = document.querySelector('#recomendation');
+    var latestGatdgets = document.querySelector('#LatestGadgets');
+    var bestSellingGatdgets = document.querySelector('#BestsellingGadgets');
+
+    field_ok = true;
+
+    if(field_ok){
+        loading.style.display = 'block';
+        result.style.display = 'none';
+    }
+    // simulating form submit
+
+    setTimeout(function(){
+        loading.style.display ='none';
+        result.style.display = 'block';
+    }, 2000);
+
+
+    
 
     // server script accepting the data
     var url = 'https://groupprojectci536.000webhostapp.com/api/data/recommend.php?id=428651031';
@@ -63,7 +84,7 @@ window.addEventListener("load", function (evt) {
 
 
     // latest gadgets 
-    var latestGatdgets = document.querySelector('#LatestGadgets');
+    
 
     var latestGatdgetsUrl = 'https://groupprojectci536.000webhostapp.com/api/data/recommend.php?id=428652031';
 
@@ -120,7 +141,7 @@ window.addEventListener("load", function (evt) {
     xhr2.send();
 
     // best seller gadgets
-    var bestSellingGatdgets = document.querySelector('#BestsellingGadgets');
+    
 
     var bestSellingGatdgetsUrl = 'https://groupprojectci536.000webhostapp.com/api/data/recommend.php?id=429886031';
     
