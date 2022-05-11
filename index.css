@@ -22,7 +22,7 @@ li{
   float: right;
   margin-right: 80px;
   padding-right: 10px;
-  display: flex;
+  display: none;
   border-radius: 20px;
   box-shadow: inset rgba(207, 216, 230, 0.8) 1px 1px 1px 1px;
   
@@ -40,19 +40,70 @@ li{
     border-radius: 20px;
     margin-top: 10px;
     padding-left: 8px;
+    
+    
+   
+    
 }
 #recomendation{
+    
+    /* position: relative;
+    padding: 20px;
     display: flex;
     width: 100%;
     margin: auto;
     margin-top: 21px;
     margin-bottom: 21px;
     flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;
     background-color: rgb(255, 253, 253);
     border: 1px solid rgb(121, 117, 117);
-    border-radius: 20px;
+    border-radius: 20px; */
+
+    /* padding: 0 10vw; */
+    border-radius: 20px; 
+    border: 1px solid rgb(121, 117, 117);
+    background-color: rgb(255, 253, 253);
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    
+}
+/* #recomendation::-webkit-scrollbar {
+    display: none;
+} */
+
+.pre-btn,
+.nxt-btn {
+  border: none;
+  width: 10vw;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #fff 100%);
+  cursor: pointer;
+  z-index: 8;
+}
+
+.pre-btn {
+  left: 0;
+  transform: rotate(180deg);
+}
+
+.nxt-btn {
+  right: 0;
+}
+
+.pre-btn img,
+.nxt-btn img {
+  opacity: 0.2;
+}
+
+.pre-btn:hover img,
+.nxt-btn:hover img {
+  opacity: 1;
 }
 
 .loader-wrapper {
@@ -110,11 +161,18 @@ item{
     border: solid 5px rgb(0, 0, 0);
     border-radius: 20px;
     justify-content: space-evenly;
-    margin: auto;
+    margin: 10px;
+    /* padding: 0 10vw;
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth; */
 }
+
 img{
     width: 300px;
+  
 }
+
 #title p{
     text-overflow: ellipsis;
 }
@@ -149,7 +207,7 @@ img{
     display: inline;
 }
 #BestsellingGadgets{
-    display: flex;
+    /* display: flex;
     width: 100%;
     margin: auto;
     margin-top: 21px;
@@ -159,11 +217,16 @@ img{
     flex-wrap: wrap;
     background-color: rgb(255, 253, 253);
     border: 1px solid rgb(121, 117, 117);
-    border-radius: 20px;
-
+    border-radius: 20px; */
+    border-radius: 20px; 
+    border: 1px solid rgb(121, 117, 117);
+    background-color: rgb(255, 253, 253);
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
 }
 #LatestGadgets{
-    display: flex;
+    /* display: flex;
     width: 100%;
     margin: auto;
     margin-top: 21px;
@@ -173,6 +236,35 @@ img{
     flex-wrap: wrap;
     background-color: rgb(255, 253, 253);
     border: 1px solid rgb(121, 117, 117);
-    border-radius: 20px;
+    border-radius: 20px; */
+
     
+    border-radius: 20px; 
+    border: 1px solid rgb(121, 117, 117);
+    background-color: rgb(255, 253, 253);
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    
+}
+
+#wrapper {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-areas: 
+    "banner"
+    "menu"
+    "result"
+    "loader-wrapper"
+    "footer";
+}
+
+@media (min-width: 430px) {
+    #LatestGadgets{
+        /* display: none; */
+    }
+
+    #search {
+        display: inline;
+    }
 }
