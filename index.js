@@ -1,6 +1,11 @@
+function openNav() {
+    document.getElementById("mySidenav").style.width = "350px";
+}
+  
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
 window.addEventListener("load", function (evt) {
-
-   
 
     evt.preventDefault();
 
@@ -39,6 +44,7 @@ window.addEventListener("load", function (evt) {
             path.forEach(function(item) {
 
                 var node = document.createElement('item');
+                node.setAttribute('id', 'item');
 
                 var img = document.createElement('img');
                 img.src = item.image;
@@ -71,6 +77,13 @@ window.addEventListener("load", function (evt) {
                 recomendation.appendChild(title);
                 */
 
+                
+
+                
+
+                
+                
+
             });
 
                 
@@ -80,6 +93,27 @@ window.addEventListener("load", function (evt) {
     });
     xhr.open('GET', url, true);
     xhr.send();
+
+    // const productContainers = [...document.querySelectorAll('#recomendation')];
+    // const nxtBtn = [...document.querySelectorAll('.nxt-btn')];
+    // const preBtn = [...document.querySelectorAll('.pre-btn')];
+
+    // productContainers.forEach((item, i) => {
+    //     let containerDimensions = item.getBoundingClientRect();
+    //     let containerWidth = containerDimensions.width;
+
+    //     nxtBtn[i].addEventListener('click', () => {
+    //         item.scrollLeft += containerWidth;
+    //     })
+
+    //     preBtn[i].addEventListener('click', () => {
+    //         item.scrollLeft -= containerWidth;
+    //     })
+    // })
+
+    
+
+   
 
 
 
@@ -198,7 +232,7 @@ window.addEventListener("load", function (evt) {
     xhr1.send();
 
 
-    
+   
  
     
     
