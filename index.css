@@ -369,6 +369,13 @@ img{
         font-size: 24px;
         
     }
+
+    #bottom_nav{
+        display: inline;
+        border: none;
+        font-size: 15px;
+    }
+
     #logo{
         text-align: left;
     }
