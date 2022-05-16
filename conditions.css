@@ -1,0 +1,49 @@
+p {
+    text-align:justify;
+    line-height: 25px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.conditionslist {
+    padding-left: 15px;
+    padding-right: 15px;
+    border-bottom: solid 1px black;
+}
+
+ul {
+    padding: 0px;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: justify;
+}
+
+.maintitle {
+    border-bottom: solid 1px black;
+}
+
+.subtitle {
+    padding-top: 20px;
+}
+
+h3 {
+    margin: 0px;
+}
+
+.tcparagraph p {
+    margin: 0px;
+    border-bottom: solid 1px black;
+}
+
+.PPparagraph p {
+    margin: 0px;
+    border-bottom: solid 1px black;
+}
+
+.tcparagraph a{
+    color: blue;
+}
+
+.PPparagraph a{
+    color: blue;
+}
