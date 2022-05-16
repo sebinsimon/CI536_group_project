@@ -76,19 +76,7 @@ window.addEventListener("load", function (evt) {
                 title.textContent = item.title;
                 recomendation.appendChild(title);
                 */
-
-                
-
-                
-
-                
-                
-
-            });
-
-                
-
-                 
+            });       
         } 
     });
     xhr.open('GET', url, true);
@@ -222,10 +210,7 @@ window.addEventListener("load", function (evt) {
                 */
 
             });
-
-                
-
-                 
+       
         } 
     });
     xhr1.open('GET', bestSellingGatdgetsUrl, true);
