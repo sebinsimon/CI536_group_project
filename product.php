@@ -1,3 +1,13 @@
+<?php
+$id = explode( "/", $_GET['id'] );
+
+$json = json_decode(file_get_contents("https://groupprojectci536.000webhostapp.com/api/data/product.php?id=$id[0]"));
+$title = $json->title;
+$description = $json->description;
+$image = $json->image;
+$brands = $json->brands->brands;
+
+?>
 <!doctype html>
 <html>
 <head>
@@ -26,22 +36,17 @@
 
     <div id="result">
         <div id= "products">
-        <img id="img-product" src="/laptop.png">
-        <h4 id="title-products"> title </h4>
-            <p id="desc-product">Description:Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
-                    eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                    sunt in culpa qui officia deserunt mollit anim id est laborum.</p> 
+        <img id="img-product" src="<?php echo $image ?>">
+        <h4 id="title-products"><?php echo $title?></h4>
+            <p id="desc-product">Description:<?php echo $description?></p> 
         </div>
         <h3>Comprarison</h3>
     <div id="Comprarison">
-        <img src="/amazon.png">
-        <h4>title and describtion</h4>
-        <p>price: $1,000</p>
-    </div> 
+        <?php 
+        foreach ($brands as $brand){
+        echo ('<item><img src="'.$brand->logo.'" id="img"><p id="title">'.$brand->title.'</p><p id="price">'.$brand->price.'</p></item>');
+        }
+        ?>
     </div>
 
     <footer>
@@ -53,13 +58,3 @@
     </footer>
 </body>
 </html>
-
-
-
-<?php
-$id = explode( "/", $_GET['id'] );
-echo $id[0];
-
-
-
-?>
