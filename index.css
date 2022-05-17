@@ -301,6 +301,12 @@ img{
     scroll-behavior: smooth;
     
 }
+/* To style the footer */
+#bottom_nav{
+    display: inline;
+    border: none;
+    font-size: 15px;
+}
 
 /*design for tablet*/
 @media (min-width: 40em) {
@@ -369,6 +375,10 @@ img{
         font-size: 24px;
         
     }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 138459ec4e3c41eec37ce158bd9ae393c5153c8e
     #logo{
         text-align: left;
     }
@@ -446,7 +456,16 @@ img{
          font-family: verdana, geneva, sans-serif;
         font-size: 45px;
             
-    }    
+    }
+    /* Style footer */
+    #bottom_nav{
+        display: inline;
+        border: none;
+    }
+
+    #bottom_nav a{
+        font-size: 20px;
+    }
 }
 
 
