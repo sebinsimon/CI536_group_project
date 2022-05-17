@@ -8,6 +8,7 @@ function closeNav() {
 window.addEventListener("load", function (evt) {
 
     evt.preventDefault();
+    // ufh
 
     var loading = document.querySelector('.loader-wrapper');
     var result = document.querySelector('#result');
@@ -224,12 +225,7 @@ window.addEventListener("load", function (evt) {
         } 
     });
     xhr1.open('GET', bestSellingGatdgetsUrl, true);
-    xhr1.send();
-
-
-   
- 
-    
+    xhr1.send(); 
     
 });
 
