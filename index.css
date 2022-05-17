@@ -302,8 +302,87 @@ img{
     
 }
 
-/*design for desktop*/
-@media (min-width: 715px) {
+/*design for tablet*/
+@media (min-width: 40em) {
+    
+    item{
+        background-color: rgb(249, 9, 9);
+        display: flex;
+        width: 300px;
+        height: auto;
+        padding: 20px;
+        flex-direction: column;
+        border: solid 5px rgb(0, 0, 0);
+        border-radius: 20px;
+        justify-content: space-evenly;
+        margin: 10px;
+    
+        /* padding: 0 10vw;
+      display: flex;
+      overflow-x: auto;
+      scroll-behavior: smooth; */
+    }
+
+    img{
+        width: 300px;
+    }
+
+    item p {
+        font-size: 15px;
+    }
+   
+    #result{
+        padding-right: 8px; 
+    }
+
+    #search {
+        display: inline;
+        float: none;
+        text-align: center;
+        padding-left: 12px;
+        padding-right: 12px;
+        margin-left: 8em;
+    }
+    li{
+        display: block;
+        font-size: 60px;
+        text-align: center;
+        border: solid 3px rgb(8, 4, 45);
+        border-bottom: 0px;
+        border-radius: 20px;
+        padding-bottom: 20px;
+    }
+    li a{
+        font-size: 12px;
+        padding-bottom: 12px;
+    }
+    #menu-point{
+        display: none;
+    }
+    #menu{
+        display: inline;
+    }
+    #menu a{
+        text-decoration: none;
+        color: rgb(255, 255, 255);
+        margin-left: 14px;
+        font-size: 24px;
+        
+    }
+    #logo{
+        text-align: left;
+    }
+    #logo a{
+        text-decoration: none;
+        padding-left:10px;
+        color: rgb(255, 255, 255);
+         font-family: verdana, geneva, sans-serif;
+        font-size: 45px;
+            
+    }    
+}
+/* design for desktop*/
+@media (min-width: 60em) {
     
     item{
         background-color: rgb(255, 255, 255);
@@ -338,9 +417,11 @@ img{
     #search {
         display: inline;
         padding-left: 20px;
+        float: right;
     }
     li{
         display: inline;
+        border: none;
     }
     #menu-point{
         display: none;
@@ -368,69 +449,5 @@ img{
     }    
 }
 
-/* For tablet screen */
 
-@media (min-width: 415px) {
-    
-    item{
-        background-color: rgb(177, 50, 50);
-        display: flex;
-        width: 300px;
-        height: auto;
-        padding: 20px;
-        flex-direction: column;
-        border: solid 5px rgb(0, 0, 0);
-        border-radius: 20px;
-        justify-content: space-evenly;
-        margin: 10px;
-    
-        /* padding: 0 10vw;
-      display: flex;
-      overflow-x: auto;
-      scroll-behavior: smooth; */
-    }
-
-    img{
-        width: 300px;
-    }
-
-    item p {
-        font-size: 15px;
-    }
-   
-    #result{
-        padding-right: 8px; 
-    }
-
-    #search {
-        display: inline;
-        padding-left: 20px;
-    }
-    li{
-        display: inline;
-    }
-    #menu-point{
-        display: none;
-    }
-    #menu{
-        display: inline;
-    }
-    #menu a{
-        text-decoration: none;
-        color: rgb(255, 255, 255);
-        margin-left: 14px;
-        font-size: 24px;
-        
-    }
-    #logo{
-        text-align: left;
-    }
-    #logo a{
-        text-decoration: none;
-        padding-left:10px;
-        color: rgb(255, 255, 255);
-         font-family: verdana, geneva, sans-serif;
-        font-size: 45px;
-            
-    }    
-}
+ 

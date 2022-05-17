@@ -43,9 +43,16 @@ window.addEventListener("load", function (evt) {
             var path = obj.items; 
             path.forEach(function(item) {
 
+                var proudctLink = document.createElement("a")
+                proudctLink.href = item.href;
+                
+                // node.appendChild(proudctLink);
+
+
                 var node = document.createElement('item');
                 node.setAttribute('id', 'item');
 
+                
                 var img = document.createElement('img');
                 img.src = item.image;
                 img.setAttribute('id', 'img');
@@ -63,8 +70,11 @@ window.addEventListener("load", function (evt) {
                 node.appendChild(price);
 
 
+                proudctLink.appendChild(node);
 
-                recomendation.appendChild(node);
+                recomendation.appendChild(proudctLink);
+
+                
                 /*
                 var node = document.createElement('item');
 
