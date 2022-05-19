@@ -4,19 +4,9 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <script src="laptop.js"></script>
+    <!-- <script src="filter.js"></script> -->
     <link rel="stylesheet" href="index.css">
     <title>Laptops</title> 
-    <!-- <meta http-equiv="Content-Security-Policy"
-        content="default-src ‘self’ cdn.groupprojectci536.000.webhostapp.com/;  
-        script-src ‘self’ js.groupprojectci536.000webhostapp.com/;  
-        style-src ‘self’ css.groupprojectci536.000webhostapp.com/; 
-        object-src ‘self’; 
-        img-src ‘self’ img.groupprojectci536.000webhostapp.com/; 
-        media-src media.groupprojectci536..000webhostapp.com/; 
-        frame-src ‘self’; 
-        font-src font.groupprojectci536..000webhostapp.com/; 
-        connect-src ‘self’; 
-        add_header Content-Security-Policy “default-src ‘self’;”;"> -->
     
 </head>
 
@@ -35,6 +25,7 @@
             </ul>   
         </nav>
         <span style="color:rgb(255, 255, 255) ; font-size:30px;cursor:pointer" onclick="openNav()" id="menu-point">&#9776; </span>
+
         <nav>
             <ul id="menu">
                 
@@ -44,11 +35,13 @@
                 <li><a href="mobile.html">Mobiles</a></li>
                 <li><form id="search_form"><input id="search_x" type="text" placeholder="Search Producds or Brands"><button id="search_btn">Search</button></form></li>
             </ul> 
+            
         </nav>
-        
-
     </header>
+    
+    <!-- <div id="resilt_filter">
 
+    </div> -->
     <div id="laptop">
         <div id="filter">
             <h2>Filter</h2>
@@ -78,9 +71,6 @@
         <div class="loader loader-inner"></div>
     </div>
 </div>
-
-</body>
-
 <footer>
     <ul>
         <li><a href="#">Privacy Policy</a></li>
@@ -88,5 +78,5 @@
         <li><a href="#">About us</a></li>
     </ul>
 </footer>
-
-</html>
+</div>
+</body>

@@ -4,19 +4,9 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <script src="desktop.js"></script>
+    <!-- <script src="filter.js"></script> -->
     <link rel="stylesheet" href="index.css">
     <title>Desktops</title> 
-    <meta http-equiv="Content-Security-Policy"
-        content="default-src ‘self’ cdn.groupprojectci536.000.webhostapp.com/;  
-        script-src ‘self’ js.groupprojectci536.000webhostapp.com/;  
-        style-src ‘self’ css.groupprojectci536.000webhostapp.com/; 
-        object-src ‘self’; 
-        img-src ‘self’ img.groupprojectci536.000webhostapp.com/; 
-        media-src media.groupprojectci536..000webhostapp.com/; 
-        frame-src ‘self’; 
-        font-src font.groupprojectci536..000webhostapp.com/; 
-        connect-src ‘self’; 
-        add_header Content-Security-Policy “default-src ‘self’;”;">
     
 </head>
 
@@ -28,26 +18,57 @@
             <ul>
                 <li><a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a></li>
                 <li><a href="Laptop.html">Laptops</a></li>
-                <li><a href="#">Tablet</a></li>
+                <li><a href="desktop.html">Desktops</a></li>
+                <li><a href="tablet.html">Tablet</a></li>
                 <li><a href="mobile.html">Mobiles</a></li>
                 <li><input id="search" type="text" placeholder="Search Producds or Brands"></li>
             </ul>   
         </nav>
         <span style="color:rgb(255, 255, 255) ; font-size:30px;cursor:pointer" onclick="openNav()" id="menu-point">&#9776; </span>
+
         <nav>
             <ul id="menu">
-                <li><a href="laptop.html">Laptops</a></li>
-                <li><a href="#">Desktops</a></li>
-                <li><a href="#">Tablets</a></li>
-                <li><a href="#">Mobiles</a></li>
-                <li><input id="search" type="text" placeholder="Search Producds or Brands"></li>
-            </ul>
+                
+                <li><a href="Laptop.html">Laptops</a></li>
+                <li><a href="desktop.html">Desktops</a></li>
+                <li><a href="tablet.html">Tablet</a></li>
+                <li><a href="mobile.html">Mobiles</a></li>
+                <li><form id="search_form"><input id="search_x" type="text" placeholder="Search Producds or Brands"><button id="search_btn">Search</button></form></li>
+            </ul> 
             
         </nav>
     </header>
+    
+    
+    <div id="desktop">
+        <div id="filter">
+            <h2>Filter</h2>
+            <h3>Brand:</h3>
+            <form id="form">
+                <input type="checkbox" name="brands" value="Lenovo">
+                <label> Lenevo</label><br>
+                <input type="checkbox" name="brands" value="HP">
+                <label> HP</label><br>
+                <input type="checkbox" name="brands" value="Asus">
+                <label> Asus</label><br>
+                <input type="checkbox" name="brands" value="Dell">
+                <label> Dell</label><br><br>
+                <button id="btn">Click to filter</button>
+            </form>
+        </div>
+        <h3>desktop</h3>
+        <!-- <button class="pre-btn"><img src="img/arrow.png" alt=""></button>
+        <button class="nxt-btn"><img src="img/arrow.png" alt=""></button> -->
+    <div id="desktop_result">
 
-</body>
-
+    </div>
+    
+    </div>
+<div class="loader-wrapper">
+    <div class="loader">
+        <div class="loader loader-inner"></div>
+    </div>
+</div>
 <footer>
     <ul>
         <li><a href="#">Privacy Policy</a></li>
@@ -55,5 +76,5 @@
         <li><a href="#">About us</a></li>
     </ul>
 </footer>
-
-</html>
+</div>
+</body>
