@@ -30,7 +30,7 @@ window.addEventListener("load", function (evt) {
     setTimeout(function(){
         loading.style.display ='none';
         desktop.style.display = 'block';
-    }, 2000);
+    }, 7000);
 
 
     
@@ -39,8 +39,27 @@ window.addEventListener("load", function (evt) {
         e.preventDefault();
         removeelm();
         var search_value = document.querySelector('#search_x').value.trim();
+
+
+        field_ok = true;
+
+    if(field_ok){
+        loading.style.display = 'block';
+        desktop.style.display = 'none';
+    }
+    // simulating form submit
+
+    setTimeout(function(){
+        loading.style.display ='none';
+        desktop.style.display = 'block';
+    }, 7000);
+
+
+
+
+
         
-        var url = 'http://groupprojectci536.000webhostapp.com/api/data/search.php?'+search_value+'';
+        var url = 'https://cheapfindsapi.000webhostapp.com/api/data/search.php?'+search_value+'';
    
         
         // make GET request
@@ -98,6 +117,7 @@ window.addEventListener("load", function (evt) {
 
    
 
+    // filter
 
     var form = document.getElementById('form');
 
@@ -105,6 +125,25 @@ window.addEventListener("load", function (evt) {
         form.addEventListener('submit', function(e){
             e.preventDefault();
             removeelm();
+
+
+            field_ok = true;
+
+            if(field_ok){
+                loading.style.display = 'block';
+                desktop.style.display = 'none';
+            }
+            // simulating form submit
+
+            setTimeout(function(){
+                loading.style.display ='none';
+                desktop.style.display = 'block';
+            }, 7000);
+
+
+
+
+
             var checkboxes = document.getElementsByName('brands');
             for(var i=0; i<checkboxes.length; i++){
                 if(checkboxes[i].checked == true){
@@ -114,7 +153,10 @@ window.addEventListener("load", function (evt) {
             }  
 
             
-            var url = 'https://cheapfindsapi.000webhostapp.com/api/data/listing.php?/desktop/s?k=desktop&page=2&qid=1652964273&ref=sr_pg_1&filter='+value.toString()+'';
+            // var url = 'https://cheapfindsapi.000webhostapp.com/api/data/listing.php?/desktop/s?k=desktop&page=2&qid=1652964273&ref=sr_pg_1&filter='+value.toString()+'';
+            var url = 'https://cheapfindsapi.000webhostapp.com/api/data/listing.php?s?k='+value.toString()+'&i=computers&rh=n%3A340831031%2Cn%3A428651031&dc&page=2&filter='+value.toString()+'';
+            
+            
 
             var xhr = new XMLHttpRequest();
         xhr.addEventListener("load", function() {
@@ -168,7 +210,7 @@ window.addEventListener("load", function (evt) {
     
 
     // server script accepting the data
-
+    // var url = 'https://groupprojectci536.000webhostapp.com/api/data/recommend.php?id=429886031';
     var url = 'https://cheapfindsapi.000webhostapp.com/api/data/listing.php?/desktop/s?k=desktop&page=2&qid=1652964273&ref=sr_pg_2';
    
         

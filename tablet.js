@@ -25,7 +25,7 @@ window.addEventListener("load", function (evt) {
     setTimeout(function(){
         loading.style.display ='none';
         tablet.style.display = 'block';
-    }, 2000);
+    }, 7000);
 
 
 
@@ -44,7 +44,7 @@ window.addEventListener("load", function (evt) {
     setTimeout(function(){
         loading.style.display ='none';
         tablet.style.display = 'block';
-    }, 2000);
+    }, 7000);
 
 
 
@@ -53,7 +53,7 @@ window.addEventListener("load", function (evt) {
 
         var search_value = document.querySelector('#search_x').value.trim();
         
-        var url = 'http://groupprojectci536.000webhostapp.com/api/data/search.php?'+search_value+'';
+        var url = 'https://cheapfindsapi.000webhostapp.com/api/data/search.php?'+search_value+'';
    
         
         // make GET request
@@ -131,7 +131,7 @@ window.addEventListener("load", function (evt) {
     setTimeout(function(){
         loading.style.display ='none';
         tablet.style.display = 'block';
-    }, 2000);
+    }, 7000);
 
 
 
@@ -147,7 +147,8 @@ window.addEventListener("load", function (evt) {
             }  
 
             
-            var url = 'https://groupprojectci536.000webhostapp.com/api/data/listing.php?/tablet/s?k=tablet&page=2&qid=1652893961&ref=sr_pg_2&filter='+value.toString()+'';
+            // var url = 'https://cheapfindsapi.000webhostapp.com/api/data/listing.php?/tablet/s?k=tablet&page=2&qid=1652893961&ref=sr_pg_2&filter='+value.toString()+'';
+            var url = 'https://cheapfindsapi.000webhostapp.com/api/data/listing.php?s?k='+value.toString()+'+tab+s7&i=computers&rh=n%3A340831031%2Cn%3A429892031&dc&page=2&filter='+value.toString()+''; 
 
             var xhr = new XMLHttpRequest();
         xhr.addEventListener("load", function() {
@@ -210,7 +211,7 @@ window.addEventListener("load", function (evt) {
 
     // server script accepting the data
     // var url = 'https://groupprojectci536.000webhostapp.com/api/data/recommend.php?id=429892031';
-    var url = 'https://groupprojectci536.000webhostapp.com/api/data/listing.php?/tablet/s?k=tablet&page=2&qid=1652893961&ref=sr_pg_2'
+    var url = 'https://cheapfindsapi.000webhostapp.com/api/data/listing.php?/tablet/s?k=tablet&page=2&qid=1652893961&ref=sr_pg_2'
         
     // make GET request
     var xhr = new XMLHttpRequest();

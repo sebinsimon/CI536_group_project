@@ -34,6 +34,20 @@ window.addEventListener("load", function (evt) {
         e.preventDefault();
         removeelm();
 
+
+        // field_ok = true;
+
+        // if(field_ok){
+        //     loading.style.display = 'block';
+        //     result.style.display = 'none';
+        // }
+        // // simulating form submit
+
+        // setTimeout(function(){
+        //     loading.style.display ='none';
+        //     result.style.display = 'block';
+        // }, 7000);
+
        
 
 
@@ -41,7 +55,7 @@ window.addEventListener("load", function (evt) {
 
         var search_value = document.querySelector('#search_x').value.trim();
         
-        var url = 'http://groupprojectci536.000webhostapp.com/api/data/search.php?'+search_value+'';
+        var url = 'https://cheapfindsapi.000webhostapp.com/api/data/search.php?'+search_value+'';
    
         
         // make GET request
@@ -105,7 +119,7 @@ window.addEventListener("load", function (evt) {
     
 
     // server script accepting the data
-    var url = 'http://cheapfindsapi.000webhostapp.com/api/data/recommend.php?id=428651031';
+    var url = 'https://cheapfindsapi.000webhostapp.com/api/data/recommend.php?id=428651031';
         
     // make GET request
     var xhr = new XMLHttpRequest();
@@ -321,4 +335,10 @@ function removeelm() {
     document.querySelector('#result').innerHTML='';
     
 }
+
+
+
+
+
+
 

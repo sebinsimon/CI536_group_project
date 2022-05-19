@@ -30,7 +30,7 @@ window.addEventListener("load", function (evt) {
     setTimeout(function(){
         loading.style.display ='none';
         laptop.style.display = 'block';
-    }, 2000);
+    }, 7000);
 
 
     
@@ -39,8 +39,28 @@ window.addEventListener("load", function (evt) {
         e.preventDefault();
         removeelm();
         var search_value = document.querySelector('#search_x').value.trim();
+
+
+        field_ok = true;
+
+        if(field_ok){
+            loading.style.display = 'block';
+            laptop.style.display = 'none';
+        }
+        // simulating form submit
+    
+        setTimeout(function(){
+            loading.style.display ='none';
+            laptop.style.display = 'block';
+        }, 7000);
+
+
+
+
+
+
         
-        var url = 'http://groupprojectci536.000webhostapp.com/api/data/search.php?'+search_value+'';
+        var url = 'https://cheapfindsapi.000webhostapp.com/api/data/search.php?'+search_value+'';
    
         
         // make GET request
@@ -106,6 +126,25 @@ window.addEventListener("load", function (evt) {
             e.preventDefault();
             removeelm();
             var checkboxes = document.getElementsByName('brands');
+
+
+            field_ok = true;
+
+            if(field_ok){
+                loading.style.display = 'block';
+                laptop.style.display = 'none';
+            }
+            // simulating form submit
+        
+            setTimeout(function(){
+                loading.style.display ='none';
+                laptop.style.display = 'block';
+            }, 7000);
+
+
+
+
+
             for(var i=0; i<checkboxes.length; i++){
                 if(checkboxes[i].checked == true){
                     value.push(checkboxes[i].value);
@@ -114,7 +153,8 @@ window.addEventListener("load", function (evt) {
             }  
 
             
-            var url = 'https://cheapfindsapi.000webhostapp.com/api/data/listing.php?/s?i=computers&rh=n%3A429886031&fs=true&page=1&filter='+value.toString()+'';
+            // var url = 'https://cheapfindsapi.000webhostapp.com/api/data/listing.php?/s?i=computers&rh=n%3A429886031&fs=true&page=1&filter='+value.toString()+'';
+            var url = 'https://cheapfindsapi.000webhostapp.com/api/data/listing.php?s?k='+value.toString()+'&i=computers&rh=n%3A429886031&page=2&filter='+value.toString()+'';
 
             var xhr = new XMLHttpRequest();
         xhr.addEventListener("load", function() {
@@ -168,6 +208,7 @@ window.addEventListener("load", function (evt) {
     
 
     // server script accepting the data
+    // var url = 'https://groupprojectci536.000webhostapp.com/api/data/recommend.php?id=429886031';
     var url = 'https://cheapfindsapi.000webhostapp.com/api/data/listing.php?/s?i=computers&rh=n%3A429886031&fs=true&page=2';
    
         
