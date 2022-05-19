@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <script src="index.js"></script>
+    <script src="laptop.js"></script>
     <link rel="stylesheet" href="index.css">
     <title>Laptops</title> 
     <meta http-equiv="Content-Security-Policy" 
@@ -24,8 +24,9 @@
         <nav id="mySidenav" class="sidenav">
             <ul>
                 <li><a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a></li>
+                <li><a href="Laptop.html">Laptops</a></li>
                 <li><a href="desktop.html">Desktops</a></li>
-                <li><a href="#">Tablet</a></li>
+                <li><a href="tablet.html">Tablet</a></li>
                 <li><a href="mobile.html">Mobiles</a></li>
                 <li><input id="search" type="text" placeholder="Search Producds or Brands"></li>
             </ul>   
@@ -33,12 +34,13 @@
         <span style="color:rgb(255, 255, 255) ; font-size:30px;cursor:pointer" onclick="openNav()" id="menu-point">&#9776; </span>
         <nav>
             <ul id="menu">
-                <li><a href="#">Laptops</a></li>
+                
+                <li><a href="Laptop.html">Laptops</a></li>
                 <li><a href="desktop.html">Desktops</a></li>
-                <li><a href="#">Tablets</a></li>
+                <li><a href="tablet.html">Tablet</a></li>
                 <li><a href="mobile.html">Mobiles</a></li>
-                <li><input id="search" type="text" placeholder="Search Producds or Brands"></li>
-            </ul>
+                <li><form id="search_form"><input id="search_x" type="text" placeholder="Search Producds or Brands"><button id="search_btn">Search</button></form></li>
+            </ul> 
         </nav>
         
 

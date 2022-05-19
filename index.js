@@ -5,11 +5,9 @@ function openNav() {
 function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
 }
-
 window.addEventListener("load", function (evt) {
 
     evt.preventDefault();
-    // ufh
 
     var loading = document.querySelector('.loader-wrapper');
     var result = document.querySelector('#result');
@@ -31,6 +29,79 @@ window.addEventListener("load", function (evt) {
     }, 2000);
 
 
+
+    document.querySelector('#search_form').addEventListener('submit', function(e){
+        e.preventDefault();
+        removeelm();
+
+       
+
+
+
+
+        var search_value = document.querySelector('#search_x').value.trim();
+        
+        var url = 'http://groupprojectci536.000webhostapp.com/api/data/search.php?'+search_value+'';
+   
+        
+        // make GET request
+        var xhr = new XMLHttpRequest();
+        xhr.addEventListener("load", function() {
+            if (xhr.status == 200) {
+                var txt = xhr.responseText;
+                var obj = JSON.parse(txt);
+                var path = obj.items; 
+                path.forEach(function(item) {
+
+                    var proudctLink = document.createElement("a")
+                    proudctLink.href = item.href;
+
+                    var node = document.createElement('item');
+                    node.setAttribute('id', 'item');
+
+                    var img = document.createElement('img');
+                    img.src = item.image;
+                    img.setAttribute('id', 'img');
+                    node.appendChild(img);
+
+                    var title = document.createElement('p');
+                    title.textContent = item.title;
+                    title.setAttribute('id', 'title');
+                    node.appendChild(title);
+
+
+                    var price = document.createElement('p');
+                    price.textContent = item.price;
+                    price.setAttribute('id', 'price');
+                    node.appendChild(price);
+
+
+
+                    proudctLink.appendChild(node);
+
+                    result.appendChild(proudctLink);
+        
+                });
+
+                    
+
+                    
+            } 
+        });
+        xhr.open('GET', url, true);
+        xhr.send();
+        
+
+    })
+
+
+
+
+
+
+
+
+
     
 
     // server script accepting the data
@@ -47,14 +118,10 @@ window.addEventListener("load", function (evt) {
 
                 var proudctLink = document.createElement("a")
                 proudctLink.href = item.href;
-                
-                // node.appendChild(proudctLink);
-
 
                 var node = document.createElement('item');
                 node.setAttribute('id', 'item');
 
-                
                 var img = document.createElement('img');
                 img.src = item.image;
                 img.setAttribute('id', 'img');
@@ -72,11 +139,10 @@ window.addEventListener("load", function (evt) {
                 node.appendChild(price);
 
 
+
                 proudctLink.appendChild(node);
 
                 recomendation.appendChild(proudctLink);
-
-                
                 /*
                 var node = document.createElement('item');
 
@@ -88,7 +154,19 @@ window.addEventListener("load", function (evt) {
                 title.textContent = item.title;
                 recomendation.appendChild(title);
                 */
-            });       
+
+                
+
+                
+
+                
+                
+
+            });
+
+                
+
+                 
         } 
     });
     xhr.open('GET', url, true);
@@ -222,17 +300,25 @@ window.addEventListener("load", function (evt) {
                 */
 
             });
-       
+
+                
+
+                 
         } 
     });
     xhr1.open('GET', bestSellingGatdgetsUrl, true);
-    xhr1.send(); 
+    xhr1.send();
+
+
+   
+ 
+    
     
 });
 
 
-
-
-
-
+function removeelm() {
+    document.querySelector('#result').innerHTML='';
+    
+}
 
