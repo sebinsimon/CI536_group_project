@@ -114,7 +114,7 @@ window.addEventListener("load", function (evt) {
             }  
 
             
-            var url = 'https://groupprojectci536.000webhostapp.com/api/data/listing.php?/desktop/s?k=desktop&page=2&qid=1652964273&ref=sr_pg_1&filter='+value.toString()+'';
+            var url = 'https://cheapfindsapi.000webhostapp.com/api/data/listing.php?/desktop/s?k=desktop&page=2&qid=1652964273&ref=sr_pg_1&filter='+value.toString()+'';
 
             var xhr = new XMLHttpRequest();
         xhr.addEventListener("load", function() {
@@ -168,8 +168,8 @@ window.addEventListener("load", function (evt) {
     
 
     // server script accepting the data
-    // var url = 'https://groupprojectci536.000webhostapp.com/api/data/recommend.php?id=429886031';
-    var url = 'https://groupprojectci536.000webhostapp.com/api/data/listing.php?/desktop/s?k=desktop&page=2&qid=1652964273&ref=sr_pg_2';
+
+    var url = 'https://cheapfindsapi.000webhostapp.com/api/data/listing.php?/desktop/s?k=desktop&page=2&qid=1652964273&ref=sr_pg_2';
    
         
     // make GET request
