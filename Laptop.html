@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <script src="index.js"></script>
+    <script src="laptop.js"></script>
     <link rel="stylesheet" href="index.css">
     <title>Laptops</title> 
     <!-- <meta http-equiv="Content-Security-Policy"
@@ -27,8 +27,9 @@
         <nav id="mySidenav" class="sidenav">
             <ul>
                 <li><a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a></li>
+                <li><a href="Laptop.html">Laptops</a></li>
                 <li><a href="desktop.html">Desktops</a></li>
-                <li><a href="#">Tablet</a></li>
+                <li><a href="tablet.html">Tablet</a></li>
                 <li><a href="mobile.html">Mobiles</a></li>
                 <li><input id="search" type="text" placeholder="Search Producds or Brands"></li>
             </ul>   
@@ -36,17 +37,47 @@
         <span style="color:rgb(255, 255, 255) ; font-size:30px;cursor:pointer" onclick="openNav()" id="menu-point">&#9776; </span>
         <nav>
             <ul id="menu">
-                <li><a href="#">Laptops</a></li>
+                
+                <li><a href="Laptop.html">Laptops</a></li>
                 <li><a href="desktop.html">Desktops</a></li>
-                <li><a href="#">Tablets</a></li>
+                <li><a href="tablet.html">Tablet</a></li>
                 <li><a href="mobile.html">Mobiles</a></li>
-                <li><input id="search" type="text" placeholder="Search Producds or Brands"></li>
-            </ul>
+                <li><form id="search_form"><input id="search_x" type="text" placeholder="Search Producds or Brands"><button id="search_btn">Search</button></form></li>
+            </ul> 
         </nav>
         
 
     </header>
 
+    <div id="laptop">
+        <div id="filter">
+            <h2>Filter</h2>
+            <h3>Brand:</h3>
+            <form id="form">
+                <input type="checkbox" name="brands" value="Lenovo">
+                <label> Lenevo</label><br>
+                <input type="checkbox" name="brands" value="HP">
+                <label> HP</label><br>
+                <input type="checkbox" name="brands" value="Asus">
+                <label> Asus</label><br>
+                <input type="checkbox" name="brands" value="Dell">
+                <label> Dell</label><br><br>
+                <button id="btn">Click to filter</button>
+            </form>
+        </div>
+        <h3>Laptop</h3>
+        <!-- <button class="pre-btn"><img src="img/arrow.png" alt=""></button>
+        <button class="nxt-btn"><img src="img/arrow.png" alt=""></button> -->
+    <div id="laptop_result">
+
+    </div>
+    
+    </div>
+<div class="loader-wrapper">
+    <div class="loader">
+        <div class="loader loader-inner"></div>
+    </div>
+</div>
 
 </body>
 

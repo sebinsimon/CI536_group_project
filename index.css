@@ -1,4 +1,4 @@
-html{
+ html{
     font-family: Arial, Helvetica, sans-serif;
 }
 #banner{
@@ -33,6 +33,7 @@ ul{
     padding-left: 0.3em;
     padding-bottom: 0.4em;
 }
+
 #search{
   float: right;
   margin-right: 80px;
@@ -41,6 +42,20 @@ ul{
   border-radius: 20px;
   box-shadow: inset rgba(207, 216, 230, 0.8) 1px 1px 1px 1px;
   
+}
+/* added */
+#search_x{
+    float: right;
+    margin-right: 80px;
+    padding-right: 10px;
+    display: none;
+    border-radius: 20px;
+    box-shadow: inset rgba(207, 216, 230, 0.8) 1px 1px 1px 1px;
+    
+}
+
+#search_btn{
+    display: none;
 }
 .sidenav {
     height: 100%;
@@ -74,6 +89,30 @@ ul{
     font-size: 36px;
     margin-left: 50px;
   }
+
+    /* design for filter */
+    #filter{
+        margin-top: 4em;
+        margin-right: 12px;  
+        padding-right: 12px;
+        float: top;  
+        border-radius: 20px; 
+        border: 1px solid rgb(121, 117, 117);
+        background-color: rgb(255, 253, 253);
+        padding-bottom: 12px;
+        padding-left: 12px;
+      }
+      #form{
+        padding-bottom: 20px;
+      }
+    
+      label{
+        padding-bottom: 12px;
+        
+      }
+      #btn{
+          margin-top: 12px;
+      }
   
   @media screen and (max-height: 450px) {
     .sidenav {padding-top: 15px;}
@@ -121,6 +160,105 @@ ul{
 /* #recomendation::-webkit-scrollbar {
     display: none;
 } */
+
+/* design for laptop page */
+#laptop{
+    display: inline;
+    background-color: #d4e3fc;
+    border: 1px solid rgb(121, 117, 117);
+    border-radius: 20px;
+    margin-top: 10px;
+    margin-right: 3px;
+    padding-left: 8px;
+    padding-right: 8px;    
+}
+#laptop_result{
+    display: flex;
+    
+    margin: auto;
+    margin-top: 21px;
+    margin-bottom: 21px;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: rgb(255, 255, 255); 
+    border-radius: 20px; 
+    border: 1px solid rgb(121, 117, 117);
+}
+/* design for desktop page */
+#desktop{
+    display: inline;
+    background-color: #d4e3fc;
+    border: 1px solid rgb(121, 117, 117);
+    border-radius: 20px;
+    margin-top: 10px;
+    margin-right: 3px;
+    padding-left: 8px;
+    padding-right: 8px;    
+}
+#desktop_result{
+    display: flex;
+    
+    margin: auto;
+    margin-top: 21px;
+    margin-bottom: 21px;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: rgb(255, 255, 255); 
+    border-radius: 20px; 
+    border: 1px solid rgb(121, 117, 117);
+}
+/* design for desktop page until here */
+/* design for laptop page until here */
+/* design for mobile page */
+#mobile{
+    display: inline;
+    background-color: #d4e3fc;
+    border: 1px solid rgb(121, 117, 117);
+    border-radius: 20px;
+    margin-top: 10px;
+    margin-right: 3px;
+    padding-left: 8px;
+    padding-right: 8px;    
+}
+#mobile_result{
+    display: flex;
+    margin: auto;
+    margin-top: 21px;
+    margin-bottom: 21px;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: rgb(255, 255, 255); 
+    border-radius: 20px; 
+    border: 1px solid rgb(121, 117, 117);
+}
+
+/* design for mobile page until here */
+/* design for tablet page here */
+#tablet{
+    display: inline;
+    background-color: #d4e3fc;
+    border: 1px solid rgb(121, 117, 117);
+    border-radius: 20px;
+    margin-top: 10px;
+    margin-right: 3px;
+    padding-left: 8px;
+    padding-right: 8px;    
+}
+#tablet_result{
+    display: flex;
+    margin: auto;
+    margin-top: 21px;
+    margin-bottom: 21px;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: rgb(255, 255, 255); 
+    border-radius: 20px; 
+    border: 1px solid rgb(121, 117, 117);
+}
 
 .pre-btn,
 .nxt-btn {
@@ -312,7 +450,7 @@ img{
 @media (min-width: 40em) {
     
     item{
-        background-color: rgb(249, 9, 9);
+        background-color: rgb(255, 250, 250);
         display: flex;
         width: 300px;
         height: auto;
@@ -327,6 +465,18 @@ img{
       display: flex;
       overflow-x: auto;
       scroll-behavior: smooth; */
+    }
+
+    #search_x{
+        display: inline;
+        float: none;
+        text-align: center;
+        padding-left: 12px;
+        padding-right: 12px;
+        margin-left: 8em;
+    }
+    #filter{
+        float: left;
     }
 
     img{
@@ -351,7 +501,6 @@ img{
     }
     li{
         display: block;
-        font-size: 60px;
         text-align: center;
         border: solid 3px rgb(8, 4, 45);
         border-bottom: 0px;
@@ -422,11 +571,19 @@ img{
         padding-right: 8px; 
     }
 
-    #search {
+    /* #search {
         display: inline;
         padding-left: 20px;
         float: right;
+    } */
+
+    #search_x {
+        display: inline;
+        padding-left: 20px;
+        margin-top: -24px;
+        float: right;
     }
+
     li{
         display: inline;
         border: none;
@@ -464,6 +621,7 @@ img{
     #bottom_nav a{
         font-size: 20px;
     }
+
 }
 
 
