@@ -5,6 +5,7 @@ function openNav() {
 function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
 }
+
 window.addEventListener("load", function (evt) {
 
     evt.preventDefault();
