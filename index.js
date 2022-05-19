@@ -32,7 +32,7 @@ window.addEventListener("load", function (evt) {
     
 
     // server script accepting the data
-    var url = 'https://groupprojectci536.000webhostapp.com/api/data/recommend.php?id=428651031';
+    var url = 'http://cheapfindsapi.000webhostapp.com/api/data/recommend.php?id=428651031';
         
     // make GET request
     var xhr = new XMLHttpRequest();
@@ -118,7 +118,7 @@ window.addEventListener("load", function (evt) {
     // latest gadgets 
     
 
-    var latestGatdgetsUrl = 'https://groupprojectci536.000webhostapp.com/api/data/recommend.php?id=428652031';
+    var latestGatdgetsUrl = 'https://cheapfindsapi.000webhostapp.com/api/data/recommend.php?id=428652031';
 
 
     var xhr2 = new XMLHttpRequest();
@@ -175,7 +175,7 @@ window.addEventListener("load", function (evt) {
     // best seller gadgets
     
 
-    var bestSellingGatdgetsUrl = 'https://groupprojectci536.000webhostapp.com/api/data/recommend.php?id=429886031';
+    var bestSellingGatdgetsUrl = 'https://cheapfindsapi.000webhostapp.com/api/data/recommend.php?id=429886031';
     
 
     var xhr1 = new XMLHttpRequest();
