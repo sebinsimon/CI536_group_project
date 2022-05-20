@@ -186,22 +186,7 @@ window.addEventListener("load", function (evt) {
     xhr.open('GET', url, true);
     xhr.send();
 
-    // const productContainers = [...document.querySelectorAll('#recomendation')];
-    // const nxtBtn = [...document.querySelectorAll('.nxt-btn')];
-    // const preBtn = [...document.querySelectorAll('.pre-btn')];
-
-    // productContainers.forEach((item, i) => {
-    //     let containerDimensions = item.getBoundingClientRect();
-    //     let containerWidth = containerDimensions.width;
-
-    //     nxtBtn[i].addEventListener('click', () => {
-    //         item.scrollLeft += containerWidth;
-    //     })
-
-    //     preBtn[i].addEventListener('click', () => {
-    //         item.scrollLeft -= containerWidth;
-    //     })
-    // })
+   
 
     
 
@@ -223,6 +208,9 @@ window.addEventListener("load", function (evt) {
             var path = obj.items; 
             path.forEach(function(item) {
 
+                var proudctLink = document.createElement("a")
+                proudctLink.href = item.href;
+
                 var node = document.createElement('item');
 
                 var img = document.createElement('img');
@@ -243,7 +231,10 @@ window.addEventListener("load", function (evt) {
 
 
 
-                latestGatdgets.appendChild(node);
+
+                proudctLink.appendChild(node);
+
+                latestGatdgets.appendChild(proudctLink);
                 /*
                 var node = document.createElement('item');
 
@@ -280,6 +271,9 @@ window.addEventListener("load", function (evt) {
             var path = obj.items; 
             path.forEach(function(item) {
 
+                var proudctLink = document.createElement("a")
+                proudctLink.href = item.href;
+
                 var node = document.createElement('item');
 
                 var img = document.createElement('img');
@@ -300,7 +294,10 @@ window.addEventListener("load", function (evt) {
 
 
 
-                bestSellingGatdgets.appendChild(node);
+
+                proudctLink.appendChild(node);
+
+                bestSellingGatdgets.appendChild(proudctLink);
                 /*
                 var node = document.createElement('item');
 

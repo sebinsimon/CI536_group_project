@@ -68,7 +68,7 @@ window.addEventListener("load", function (evt) {
 
                     var img = document.createElement('img');
                     img.src = item.image;
-                    img.setAttribute('id', 'img');
+                    img.setAttribute('id', 'img_1');
                     node.appendChild(img);
 
                     var title = document.createElement('p');
@@ -157,7 +157,7 @@ window.addEventListener("load", function (evt) {
 
                     var img = document.createElement('img');
                     img.src = item.image;
-                    img.setAttribute('id', 'img');
+                    img.setAttribute('id', 'img_1');
                     node.appendChild(img);
 
                     var title = document.createElement('p');
@@ -218,7 +218,7 @@ window.addEventListener("load", function (evt) {
 
                 var img = document.createElement('img');
                 img.src = item.image;
-                img.setAttribute('id', 'img');
+                img.setAttribute('id', 'img_1');
                 node.appendChild(img);
 
                 var title = document.createElement('p');
